@@ -8,11 +8,12 @@
 // @grant        none
 // ==/UserScript==
 
-const Spells  = {
-    //voices
+const SpellColors  = {
+    //voices (and doubles for exorcism)
     VOICES: "bfbfbf",
     //colors
     PUTRESCENT: "ccff33",
+    //thiswill double for halloween fire
     SINISTER: "66ff66",
     DIEJOB: "cccc00",
     SPECTRAL: "ff9900",
@@ -23,6 +24,7 @@ const Spells  = {
     GANGREEN: "ffff00",
     BRUISED: "ff6666",
     TEAMSPIRIT: "ff471a",
+    //this will double for pumpkin bombs
     ROTTEN: "ff9933",
     HEADLESS: "300099",
     //error/new spells
@@ -30,8 +32,57 @@ const Spells  = {
 
 }
 
+const SpellNames = {
+    //voices
+    VOICES: "Voices From Below",
+    //colors
+    PUTRESCENT: "",
+    SINISTER: "",
+    DIEJOB: "",
+    SPECTRAL: "",
+    CHROMATIC: "",
+    //footprints
+    VIOLET: "",
+    CORPSE: "",
+    GANGREEN: "",
+    BRUISED: "",
+    TEAMSPIRIT: "",
+    ROTTEN: "",
+    HEADLESS: "",
+    //weapons
+    EXORCISM: "",
+    FIRE: "",
+    BOMBS: "",
+    //error/new spells
+    DEFAULT: "f442bc"
+}
+
 (function() {
     'use strict';
 
 })();
+
+function spellSearch(spellNum, thisRow) {
+    var thisRowParent = thisRow.parentNode;
+    var thisRowGrandParent = thisRow.parentNode.parentNode;
+    
+    var spellName = thisRow.getAttribute(spellNum);
+
+    var currentStyle = thisRowGrandParent.getAttribute("style")
+
+
+
+
+}
+
+function determineSpell(spellName) {    PUTRESCENT: "ccff33",
+//thiswill double for halloween fire
+    var start = "Halloween Spell: "
+    switch(spellName) {
+        case start + SpellNames.VOICES:
+            return SpellColors.VOICES
+        default:
+            return 
+    }
+}
 
