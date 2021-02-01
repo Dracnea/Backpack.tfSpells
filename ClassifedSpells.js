@@ -45,7 +45,7 @@ var Spells = {
             spellSearch(spell1, newRows[i]);
             newDesc[i].textContent += "\r\n" + newRows[i].getAttribute(spell1) + " ";
 
-            if(newRows[i].hasAttributes(spell2)){
+            if(newRows[i].hasAttributes(spell2) && newRows[i].getAttribute(spell2) != null){
                 spellSearch(spell2, newRows[i])
                 newDesc[i].textContent += "\r\n" + newRows[i].getAttribute(spell2);
             }
