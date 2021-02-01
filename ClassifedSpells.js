@@ -41,11 +41,11 @@ var Spells = {
         var spell1 = "data-spell_1"
         var spell2 = "data-spell_2"
 
-        if(newRows[i].hasAttributes(spell1)) {
+        if(newRows[i].getAttribute(spell1) != null) {
             spellSearch(spell1, newRows[i]);
             newDesc[i].textContent += "\r\n" + newRows[i].getAttribute(spell1) + " ";
 
-            if(newRows[i].hasAttributes(spell2) && newRows[i].getAttribute(spell2) != null){
+            if(newRows[i].getAttribute(spell2) != null){
                 spellSearch(spell2, newRows[i])
                 newDesc[i].textContent += "\r\n" + newRows[i].getAttribute(spell2);
             }
