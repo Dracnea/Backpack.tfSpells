@@ -5,6 +5,7 @@
 // @description  Add color and extra text to backpack.tf listings with spells
 // @author       Dracnea
 // @match        https://backpack.tf/classifieds*
+// @match        https://backpack.tf/u*
 // @grant        none
 // ==/UserScript==
 
