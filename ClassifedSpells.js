@@ -19,7 +19,7 @@ var Spells = {
     SPECTRAL: {name: "Spectral Spectrum", color: "#ff9900"},
     CHROMATIC: {name: "Chromatic Corruption", color: "#aa80ff"},
     //footprints
-    VIOLET: {name: "Violent Violent", color: "#ffa366"},
+    VIOLET: {name: "Violent Violet", color: "#ffa366"},
     CORPSE: {name: "Corpse Gray", color: "#9fdfbf"},
     GANGREEN: {name: "Gangreen", color: "#ffff00"},
     BRUISED: {name: "Bruised Purple", color: "#ff6666"},
