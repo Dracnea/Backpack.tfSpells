@@ -10,7 +10,7 @@
 
 var Spells = {
     //voices
-    VOICES: {name: "Voices From Below", color: "#bfbfbf"},
+    VOICES: {name: "Voices", color: "#bfbfbf"},
     //colors
     PUTRESCENT: {name: "Putrescent Pigmentation", color: "#ccff33"},
     SINISTER: {name: "Sinster Staining", color: "#66ff66"},
