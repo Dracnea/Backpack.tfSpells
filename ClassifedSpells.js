@@ -14,7 +14,7 @@ var Spells = {
     VOICES: {name: "Voices", color: "#bfbfbf"},
     //colors
     PUTRESCENT: {name: "Putrescent Pigmentation", color: "#ccff33"},
-    SINISTER: {name: "Sinster Staining", color: "#66ff66"},
+    SINISTER: {name: "Sinister Staining", color: "#66ff66"},
     DIEJOB: {name: "Die Job", color: "#cccc00"},
     SPECTRAL: {name: "Spectral Spectrum", color: "#ff9900"},
     CHROMATIC: {name: "Chromatic Corruption", color: "#aa80ff"},
