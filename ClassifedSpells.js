@@ -28,8 +28,8 @@ var Spells = {
     HEADLESS: {name: "Headless Horseshoes", color: "#300099"},
     //weapons
     EXORCISM: {name: "Exorcism", color: "#bfbfbf"},
-    FIRE: {name: "Halloween Fire", color: "#66ff66"},
-    BOMBS: {name: "Pumpkin Bombs", color: "#ff9933"},
+    FIRE: {name: "Halloween Fire", color: "#33cc00"},
+    BOMBS: {name: "Pumpkin Bombs", color: "#ff6600"},
 };
 
 (function() {
