@@ -8,57 +8,28 @@
 // @grant        none
 // ==/UserScript==
 
-var SpellColors = {
-    //voices (and doubles for exorcism)
-    VOICES: "bfbfbf",
-    //colors
-    PUTRESCENT: "ccff33",
-    //thiswill double for halloween fire
-    SINISTER: "66ff66",
-    DIEJOB: "cccc00",
-    SPECTRAL: "ff9900",
-    CHROMATIC: "aa80ff",
-    //footprints
-    VIOLET: "ffa366",
-    CORPSE: "9fdfbf",
-    GANGREEN: "ffff00",
-    BRUISED: "ff6666",
-    TEAMSPIRIT: "ff471a",
-    //this will double for pumpkin bombs
-    ROTTEN: "ff9933",
-    HEADLESS: "300099",
-    //weapons
-    EXORCISM: "bfbfbf",
-    FIRE: "66ff66",
-    BOMBS: "ff9933",
-    //error/new spells
-    DEFAULT: "f442bc"
-}
-
-var SpellNames = {
+var Spells = {
     //voices
-    VOICES: "Voices From Below",
+    VOICES: {name: "Voices From Below", color: "#bfbfbf"},
     //colors
-    PUTRESCENT: "Putrescent Pigmentation",
-    SINISTER: "Sinster Staining",
-    DIEJOB: "Die Job",
-    SPECTRAL: "Spectral Spectrum",
-    CHROMATIC: "Chromatic Corruption",
+    PUTRESCENT: {name: "Putrescent Pigmentation", color: "#ccff33"},
+    SINISTER: {name: "Sinster Staining", color: "#66ff66"},
+    DIEJOB: {name: "Die Job", color: "#cccc00"},
+    SPECTRAL: {name: "Spectral Spectrum", color: "#ff9900"},
+    CHROMATIC: {name: "Chromatic Corruption", color: "#aa80ff"},
     //footprints
-    VIOLET: "Violent Violent",
-    CORPSE: "Corpse Gray",
-    GANGREEN: "Gangreen",
-    BRUISED: "Bruised Purple",
-    TEAMSPIRIT: "Team Sprit",
-    ROTTEN: "Rotten Orange",
-    HEADLESS: "Headless Horseshoes",
+    VIOLET: {name: "Violent Violent", color: "#ffa366"},
+    CORPSE: {name: "Corpse Gray", color: "#9fdfbf"},
+    GANGREEN: {name: "Gangreen", color: "#ffff00"},
+    BRUISED: {name: "Bruised Purple", color: "#ff6666"},
+    TEAMSPIRIT: {name: "Team Sprit", color: "#ff471a"},
+    ROTTEN: {name: "Rotten Orange", color: "#ff9933"},
+    HEADLESS: {name: "Headless Horseshoes", color: "#300099"},
     //weapons
-    EXORCISM: "Exorcism",
-    FIRE: "Halloween Fire",
-    BOMBS: "Pumpkin Bombs",
-    //error/new spells
-    DEFAULT: "Default"
-}
+    EXORCISM: {name: "Exorcism", color: "#bfbfbf"},
+    FIRE: {name: "Halloween Fire", color: "#66ff66"},
+    BOMBS: {name: "Pumpkin Bombs", color: "#ff9933"},
+};
 
 (function() {
     'use strict';
@@ -89,65 +60,38 @@ function spellSearch(spellNum, thisRow) {
 
     var currentStyle = thisRowGrandParent.getAttribute("style")
 
-    var currentColor = determineSpell(spellName)
+    var currentColor
+    if(spellName != null) {
+        currentColor = determineSpell(spellName)
 
-    switch(currentColor) {
-        case SpellColors.FIRE:
-        case SpellColors.BOMBS:
-        case SpellColors.VIOLET:
-        case SpellColors.CORPSE:
-        case SpellColors.GANGREEN:
-        case SpellColors.BRUISED:
-        case SpellColors.TEAMSPIRIT:
-        case SpellColors.ROTTEN:
-        case SpellColors.HEADLESS:
-            thisRowParent.setAttributes("style", currentStyle + ";background-color: " + currentColor)
+        switch(currentColor) {
+        case Spells.FIRE.color:
+        case Spells.BOMBS.color:
+        case Spells.VIOLET.color:
+        case Spells.CORPSE.color:
+        case Spells.GANGREEN.color:
+        case Spells.BRUISED.color:
+        case Spells.TEAMSPIRIT.color:
+        case Spells.ROTTEN.color:
+        case Spells.HEADLESS.color:
+            thisRowParent.setAttribute("style", currentStyle + ";background-color: " + currentColor)
             break
         default:
-            thisRowGrandParent.setAttributes("style", currentStyle + ";background-color: " + currentColor)
+            thisRowGrandParent.setAttribute("style", currentStyle + ";background-color: " + currentColor)
             break
+        }
     }
-
 }
 
 function determineSpell(spellName) {
-//thiswill double for halloween fire
-    var start = "Halloween Spell: "
-    var footprints = " Footprints"
-    switch(spellName) {
-        case start + SpellNames.VOICES:
-            return SpellColors.VOICES
-        case start + SpellNames.PUTRESCENT:
-            return SpellColors.PUTRESCENT
-        case start + SpellNames.SINISTER:
-            return SpellColors.SINISTER
-        case start + SpellNames.DIEJOB:
-            return SpellColors.DIEJOB
-        case start + SpellNames.SPECTRAL:
-            return SpellColors.SPECTRAL
-        case start + SpellNames.CHROMATIC:
-            return SpellColors.CHROMATIC
-        case start + SpellNames.VIOLET + footprints:
-            return SpellColors.VIOLET
-        case start + SpellNames.CORPSE + footprints:
-            return SpellColors.CORPSE
-        case start + SpellNames.GANGREEN + footprints:
-            return SpellColors.GANGREEN
-        case start + SpellNames.BRUISED + footprints:
-            return SpellColors.BRUISED
-        case start + SpellNames.TEAMSPIRIT + footprints:
-            return SpellColors.TEAMSPIRIT
-        case start + SpellNames.ROTTEN + footprints:
-            return SpellNames.ROTTEN
-        case start + SpellNames.HEADLESS:
-            return SpellColors.HEADLESS
-        case start + SpellNames.EXORCISM:
-            return SpellColors.EXORCISM
-        case start + SpellNames.FIRE:
-            return SpellColors.FIRE
-        case start + SpellNames.BOMBS:
-            return SpellColors.BOMBS
-        default:
-            return SpellColors.DEFAULT
+    //loop through each spell within spells enum
+    for(const spell in Spells) {
+        //check for matching name
+        if(spellName.includes(Spells[spell].name)){
+            //return color
+            return Spells[spell].color
+        }
     }
+    //return default color
+    return "#f442bc"
 }
