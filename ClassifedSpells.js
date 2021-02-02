@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Classfied Spells
+// @name         Backpack.tf Spells
 // @namespace    http://tampermonkey.net/
-// @version      3.0
-// @description  Add color and extra text to backpack.tf listings with spells
+// @version      4.0
+// @description  Add color and extra text to backpack.tf classifieds, listings, and premium search pages
 // @author       Dracnea
 // @match        https://backpack.tf/classifieds*
 // @match        https://backpack.tf/u*
