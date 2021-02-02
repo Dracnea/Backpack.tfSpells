@@ -6,6 +6,7 @@
 // @author       Dracnea
 // @match        https://backpack.tf/classifieds*
 // @match        https://backpack.tf/u*
+// @match        https://backpack.tf/premium*
 // @grant        none
 // ==/UserScript==
 
@@ -34,7 +35,14 @@ var Spells = {
 
 (function() {
     'use strict';
-    var newRows = document.querySelectorAll("div.item")
+    url = window.location.href
+    var newRows 
+    if(url.includes(premium)) {
+        newRows = document.querySelectorAll("li.item")
+    }
+    else {
+        newRows = document.querySelectorAll("div.item")
+    } 
     var newDesc = document.querySelectorAll("h5")
 
     for(var i = 0; i < newRows.length; i++){
