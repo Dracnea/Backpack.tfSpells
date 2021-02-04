@@ -35,9 +35,9 @@ var Spells = {
 
 (function() {
     'use strict';
-    url = window.location.href
+    var url = window.location.href
     var newRows 
-    if(url.includes(premium)) {
+    if(url.includes("premium")) {
         newRows = document.querySelectorAll("li.item")
     }
     else {
