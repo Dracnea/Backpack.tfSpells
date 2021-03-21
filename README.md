@@ -14,7 +14,7 @@ This version is not free due to the fact that it can become a powerful tool used
 
 Tampermonkey is a useful browser addon that allows you to run javascript code on your browser.<br/>
 Installation of Tampermonkey is **REQUIRED** in order to run this tool.<br/><br/>
-To install this script you must open a new tab, **DELETE EVERYTHING THAT IS PRE-GENERATED**, and copy the entire script in from <a href="https://github.com/Dracnea/Backpack.tfSpells/blob/main/BackpackSpells.js">BackpackSpells.js</a>. You must then make sure to save the file.<br/><br/>
+To install this script you must open a new tab, **DELETE EVERYTHING THAT IS PRE-GENERATED**, and copy-paste the entire script from <a href="https://github.com/Dracnea/Backpack.tfSpells/blob/main/BackpackSpells.js">BackpackSpells.js</a>. You must then make sure to save the file.<br/><br/>
 Tampermonkey is available for all browsers and can be downloaded <a href="http://www.tampermonkey.net/">here</a>.
 
 ## Donations
