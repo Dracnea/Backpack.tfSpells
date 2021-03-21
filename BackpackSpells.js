@@ -24,7 +24,7 @@ var Spells = {
     CORPSE: {name: "Corpse Gray", color: "#9fdfbf"},
     GANGREEN: {name: "Gangreen", color: "#ffff00"},
     BRUISED: {name: "Bruised Purple", color: "#ff6666"},
-    TEAMSPIRIT: {name: "Team Sprit", color: "#ff471a"},
+    TEAMSPIRIT: {name: "Team Spirit", color: "#ff471a"},
     ROTTEN: {name: "Rotten Orange", color: "#ff9933"},
     HEADLESS: {name: "Headless Horseshoes", color: "#300099"},
     //weapons
