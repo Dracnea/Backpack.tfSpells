@@ -19,4 +19,4 @@ Tampermonkey is available for all browsers and can be downloaded <a href="http:/
 
 ## Donations
 
-Please feel free to send me donations through <a href="https://steamcommunity.com/tradeoffer/new/?partner=121073135&token=HJllzjn8">Steam Items</a> or <a href="">Paypal</a>
+Please feel free to send me donations through <a href="https://steamcommunity.com/tradeoffer/new/?partner=121073135&token=HJllzjn8">Steam Items</a> or <a href="https://paypal.me/Dracnea?locale.x=en_US">Paypal</a>
