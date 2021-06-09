@@ -4,10 +4,11 @@ This script works on the classified, premium search, and user profile pages.
 
 ## Paid For Features
 
-If you would like to inquire about the paid version please <a href="https://steamcommunity.com/id/Dracnea">add me on Steam.</a> You must leave a comment.<br/><br/>
-The paid version will automatically search through all pages on the backpack.tf premium tool and return every spelled instance in a neat and clean single tab.<br/><br/>
-This version is not free due to the fact that it can become a powerful tool used to gather data on both items and individuals, and thus can be used for the wrong reasons.
+~~If you would like to inquire about the paid version please <a href="https://steamcommunity.com/id/Dracnea">add me on Steam.</a> You must leave a comment.<br/><br/>~~
+~~The paid version will automatically search through all pages on the backpack.tf premium tool and return every spelled instance in a neat and clean single tab.<br/><br/>~~
+~~This version is not free due to the fact that it can become a powerful tool used to gather data on both items and individuals, and thus can be used for the wrong reasons.~~
 
+This has been discontinued due to the fact that backpack.tf has finally added spells to their "build a search" api functions. Something that should have been there day one and that I heavily advocated for. The <a href ="https://github.com/Dracnea/SpellSearcher">Premium Code</a> is now public for anyone to see how it works and use for future webcrawling purposes.
 ## Required Software
 
 ### TamperMonkey
